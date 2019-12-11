@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+      
+    <h1>Thank you for your text! Let us now analyse it...</h1>
+    <br>
+    Input <a href={% url 'home' %}><strong>Another Text</strong></a>
+    <h3>Your text</h3>
+
+    {{ fulltext }}
+
+    <h2>List of words are:</h2>
+    {% for word, t_count in word_count %} {{ word }} : {{ t_count }}
+    <br />
+    {% endfor%}
+  </body>
+</html>
